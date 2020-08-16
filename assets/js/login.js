@@ -35,7 +35,7 @@ $(function () {
         // 发送注册请求
         $.ajax({
             method: 'post',
-            url: 'http://ajax.frontend.itheima.net/api/reguser',
+            url: '/api/reguser',
             data: {
                 username: uname,
                 password: pw
@@ -53,12 +53,11 @@ $(function () {
     // 6 给登录表达绑定事件
     $('#form_login').on('submit', function (e) {
         e.preventDefault();
-        // console.log(11);
         // 发送ajax请求
         var data = $(this).serialize();
         $.ajax({
             method: 'post',
-            url: 'http://ajax.frontend.itheima.net/api/login',
+            url: '/api/login',
             data: data,
             success: function (res) {
                 if (res.status != 0) {
