@@ -1,10 +1,7 @@
 // 1 获取文章分类数据
 //  获取layer对象
 var layer = layui.layer;
-<<<<<<< HEAD
-=======
 var form = layui.form;
->>>>>>> art
 function getText() {
     $.ajax({
         method: 'get',
@@ -14,11 +11,7 @@ function getText() {
             if (res.status !== 0) {
                 return layer.msg(res.message, { icon: 2, shift: 6 });
             }
-<<<<<<< HEAD
-            layer.msg(res.message, { icon: 1, shift: 6 });
-=======
             // layer.msg(res.message, { icon: 1, shift: 6 });
->>>>>>> art
             // 渲染图书数据
             // 1 引入模板js文件
             // 2 准备数据
@@ -32,14 +25,6 @@ function getText() {
 }
 getText();
 // 2 添加图书
-<<<<<<< HEAD
-function addText() {
-    $('#btnAddCate').on('click', function () {
-        layer.open({
-            type: 1,
-            title: '在线调试',
-            content: '可以填写任意的layer代码',
-=======
 var indexAdd = null;
 function addText() {
     $('#btnAddCate').on('click', function () {
@@ -47,14 +32,10 @@ function addText() {
             type: 1,
             title: '添加文章分类',
             content: $('#dialog-add').html(),
->>>>>>> art
             area: ['500px', '300px']
         });
     })
 };
-<<<<<<< HEAD
-addText();
-=======
 addText();
 // 绑定表单提交
 $('body').on('submit', '#form-add', function (e) {
@@ -132,4 +113,3 @@ $('tbody').on('click', '.btn-delete', function () {
     });
     layer.close(indexEdit);
 })
->>>>>>> art
