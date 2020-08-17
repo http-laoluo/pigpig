@@ -19,4 +19,4 @@ $.ajax({
         // 5 渲染数据
         $('tbody').empty().append(t);
     }
-})
+});
